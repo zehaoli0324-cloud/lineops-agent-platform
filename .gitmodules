@@ -1,0 +1,6 @@
+[submodule "third_party/FUXA"]
+	path = third_party/FUXA
+	url = https://github.com/frangoteam/FUXA.git
+[submodule "third_party/neuroptica"]
+	path = third_party/neuroptica
+	url = https://github.com/fancompute/neuroptica.git

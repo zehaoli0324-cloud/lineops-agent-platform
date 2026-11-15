@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-11-15",
+  "source_only": true,
+  "installed": false,
+  "tested": false,
+  "dependencies": [
+    {
+      "name": "FUXA",
+      "path": "third_party/FUXA",
+      "url": "https://github.com/frangoteam/FUXA.git",
+      "commit": "af0ec56e8d729c271885fbba2872f55975f6d246",
+      "license": "MIT",
+      "role": "adopted_workbench"
+    },
+    {
+      "name": "Neuroptica",
+      "path": "third_party/neuroptica",
+      "url": "https://github.com/fancompute/neuroptica.git",
+      "commit": "7bc3c152f2713780b88e701744b0541175b12111",
+      "license": "MIT",
+      "role": "adopted_optical_functional_simulator"
+    }
+  ]
+}
