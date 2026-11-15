@@ -1,0 +1,1171 @@
+{
+  "figure": 1,
+  "canvas": [
+    1820,
+    1780
+  ],
+  "nodes": [
+    {
+      "id": "fuxa",
+      "title": "FUXA HMI",
+      "subtitle": "设备图 / 标签 / 趋势",
+      "status": "planned",
+      "detail": "FUXA 源码已固定。实际部署、画面配置与 MQTT 标签绑定尚未完成，初期只读。",
+      "bounds": [
+        250,
+        266,
+        280,
+        75
+      ]
+    },
+    {
+      "id": "console",
+      "title": "Evidence console",
+      "subtitle": "图像 / 事件 / 工具轨迹",
+      "status": "built",
+      "detail": "已实现独立浏览器证据页，展示运行模式、动作前后 PNG、事件终态、工单和轨迹。",
+      "bounds": [
+        550,
+        266,
+        280,
+        75
+      ]
+    },
+    {
+      "id": "portal",
+      "title": "Maintenance portal",
+      "subtitle": "人工接管 / 审批 / 资源视图",
+      "status": "planned",
+      "detail": "规划：工单门户、人工接管与资源视图。当前仅内置测试工单，不是外部 CMMS。",
+      "bounds": [
+        850,
+        266,
+        340,
+        75
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "Incident lifecycle",
+      "subtitle": "终态 / 工单 / 审计",
+      "status": "built",
+      "detail": "已测试 created → running → recovered / handed_off / stopped / failed；SQLite 保存事件、PNG 与工单。",
+      "bounds": [
+        250,
+        428,
+        280,
+        65
+      ]
+    },
+    {
+      "id": "budgets",
+      "title": "Budgets & stop",
+      "subtitle": "步数限额 / 单进程锁",
+      "status": "built",
+      "detail": "已实现工具调用预算、单进程设备锁、停止标记。未实现跨进程锁或多设备调度。",
+      "bounds": [
+        550,
+        428,
+        280,
+        65
+      ]
+    },
+    {
+      "id": "scheduler",
+      "title": "Queue & checkpoint",
+      "subtitle": "租约 / 健康 / 重启恢复",
+      "status": "planned",
+      "detail": "规划：异步队列、租约、心跳与世界检查点。当前重启后未完成任务标 failed，不能接续执行。",
+      "bounds": [
+        850,
+        428,
+        340,
+        65
+      ]
+    },
+    {
+      "id": "diagnosis",
+      "title": "Diagnostic agent",
+      "subtitle": "取证 / 比较候选原因",
+      "status": "partial",
+      "detail": "角色权限与工具调用协议 mock 已测；尚无真实模型效果记录。三角色共享模型端点，由确定性运行器编排。",
+      "bounds": [
+        250,
+        562,
+        280,
+        88
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "Planning agent",
+      "subtitle": "方案 / 允许动作 / 移交",
+      "status": "partial",
+      "detail": "角色权限与工具调用协议 mock 已测；尚无真实模型效果记录。三角色共享模型端点，由确定性运行器编排。",
+      "bounds": [
+        550,
+        562,
+        280,
+        88
+      ]
+    },
+    {
+      "id": "verifier",
+      "title": "Verification agent",
+      "subtitle": "新观测 / 恢复判定",
+      "status": "partial",
+      "detail": "角色权限与工具调用协议 mock 已测；尚无真实模型效果记录。三角色共享模型端点，由确定性运行器编排。",
+      "bounds": [
+        850,
+        562,
+        340,
+        88
+      ]
+    },
+    {
+      "id": "readtools",
+      "title": "Observation tools",
+      "subtitle": "图像 / 遥测 / 内置手册",
+      "status": "built",
+      "detail": "Agent 仅读取公开观测、像素测量、遥测与手册，工具不返回隐藏故障标签。",
+      "bounds": [
+        250,
+        717,
+        280,
+        83
+      ]
+    },
+    {
+      "id": "gateway",
+      "title": "Action gateway",
+      "subtitle": "白名单 / 版本 / TTL / 幂等",
+      "status": "built",
+      "detail": "已测试维护前暂停、陈旧版本、过期与非有限有效期、非法动作和重复动作 ID；重放不重复变更状态。",
+      "bounds": [
+        550,
+        717,
+        280,
+        83
+      ]
+    },
+    {
+      "id": "recovery",
+      "title": "Recovery evaluator",
+      "subtitle": "新帧 / 质量 / 过程 / 运行态",
+      "status": "built",
+      "detail": "固定代码强制三次新帧复核。模型结论与工具成功回执均不能直接标记 recovered；目前没有物理时间稳定窗口。",
+      "bounds": [
+        850,
+        717,
+        340,
+        83
+      ]
+    },
+    {
+      "id": "perception",
+      "title": "Perception adapters",
+      "subtitle": "测量 / 分割 / 信号特征",
+      "status": "partial",
+      "detail": "当前从合成 PNG 使用 RGB 阈值测量胶条覆盖率与液位，未训练工业模型；其他视觉与信号插件属于规划。",
+      "bounds": [
+        250,
+        864,
+        280,
+        89
+      ]
+    },
+    {
+      "id": "compute",
+      "title": "Compute dispatcher",
+      "subtitle": "CPU / optical / GPU",
+      "status": "partial",
+      "detail": "CPU 像素测量已测。Neuroptica 8 端口功能单测通过，尚未进入视觉决策链；GPU 和真实硬件后端为规划。",
+      "bounds": [
+        550,
+        864,
+        280,
+        89
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "Evidence & memory",
+      "subtitle": "PNG / 测量 / 回执 / 案例",
+      "status": "partial",
+      "detail": "SQLite 已保存事件、不可变 PNG、工具参数与回执、工单。知识检索与跨任务记忆管理待实现。",
+      "bounds": [
+        850,
+        864,
+        340,
+        89
+      ]
+    },
+    {
+      "id": "readadapters",
+      "title": "Sensor readers",
+      "subtitle": "相机 / PLC / MQTT / 日志",
+      "status": "partial",
+      "detail": "模拟器图像和供压适配已实现；实际 PLC、相机、视频和 MQTT 传输未接入。",
+      "bounds": [
+        250,
+        1014,
+        280,
+        76
+      ]
+    },
+    {
+      "id": "actadapters",
+      "title": "Actuator adapters",
+      "subtitle": "暂停 / 维护 / 恢复 / 查询",
+      "status": "partial",
+      "detail": "目前仅执行软件沙箱动作。真实设备写入需要独立设备语义、权限、质量和验收。",
+      "bounds": [
+        550,
+        1014,
+        280,
+        76
+      ]
+    },
+    {
+      "id": "businessadapters",
+      "title": "Business connectors",
+      "subtitle": "CMMS / 备件 / 人员 / 排程",
+      "status": "planned",
+      "detail": "外部业务系统与资源排程为规划；当前测试工单存储于内部 SQLite。",
+      "bounds": [
+        850,
+        1014,
+        340,
+        76
+      ]
+    },
+    {
+      "id": "virtual",
+      "title": "Virtual production line",
+      "subtitle": "点胶 / 灌装；有状态因果",
+      "status": "built",
+      "detail": "两场景 × 五条件已测：正常、堵塞、供料不足、镜头退化、持续故障。仅简化离散软件模型。",
+      "bounds": [
+        250,
+        1147,
+        280,
+        60
+      ]
+    },
+    {
+      "id": "physical",
+      "title": "Physical equipment",
+      "subtitle": "真实设备 / 多模态采集",
+      "status": "planned",
+      "detail": "真实设备 / 多模态采集",
+      "bounds": [
+        550,
+        1147,
+        280,
+        60
+      ]
+    },
+    {
+      "id": "business",
+      "title": "Business systems",
+      "subtitle": "工单 / 资源 / 维护窗口",
+      "status": "planned",
+      "detail": "工单 / 资源 / 维护窗口",
+      "bounds": [
+        850,
+        1147,
+        340,
+        60
+      ]
+    },
+    {
+      "id": "loop-01",
+      "title": "01  Observe",
+      "subtitle": "补采图像与过程数据",
+      "status": "built",
+      "detail": "补采图像与过程数据",
+      "bounds": [
+        1320,
+        266,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "loop-02",
+      "title": "02  Form hypotheses",
+      "subtitle": "根据证据比较故障原因",
+      "status": "partial",
+      "detail": "根据证据比较故障原因",
+      "bounds": [
+        1320,
+        390,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "loop-03",
+      "title": "03  Choose intervention",
+      "subtitle": "比较检查、维护与移交",
+      "status": "partial",
+      "detail": "比较检查、维护与移交",
+      "bounds": [
+        1320,
+        516,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "loop-04",
+      "title": "04  Check preconditions",
+      "subtitle": "状态版本 / 有效期 / 暂停",
+      "status": "built",
+      "detail": "状态版本 / 有效期 / 暂停",
+      "bounds": [
+        1320,
+        642,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "loop-05",
+      "title": "05  Mutate plant state",
+      "subtitle": "执行后取得真实工具回执",
+      "status": "built",
+      "detail": "执行后取得真实工具回执",
+      "bounds": [
+        1320,
+        768,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "loop-06",
+      "title": "06  Acquire fresh evidence",
+      "subtitle": "重新渲染 / 重新测量",
+      "status": "built",
+      "detail": "重新渲染 / 重新测量",
+      "bounds": [
+        1320,
+        894,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "loop-07",
+      "title": "07  Evaluate recovery",
+      "subtitle": "固定规则判定；不得自报成功",
+      "status": "built",
+      "detail": "固定规则判定；不得自报成功",
+      "bounds": [
+        1320,
+        1020,
+        416,
+        86
+      ]
+    },
+    {
+      "id": "truth",
+      "title": "Hidden truth",
+      "subtitle": "故障 / 种子",
+      "status": "built",
+      "detail": "私有真值供模拟器与评测端使用，不作为 Agent 的工具输出。",
+      "bounds": [
+        1302,
+        1372,
+        145,
+        83
+      ]
+    },
+    {
+      "id": "render",
+      "title": "Renderer",
+      "subtitle": "状态 → 观测",
+      "status": "built",
+      "detail": "状态 → 观测",
+      "bounds": [
+        1464,
+        1372,
+        127,
+        83
+      ]
+    },
+    {
+      "id": "publicobs",
+      "title": "Public data",
+      "subtitle": "PNG / 遥测",
+      "status": "built",
+      "detail": "PNG / 遥测",
+      "bounds": [
+        1608,
+        1372,
+        145,
+        83
+      ]
+    }
+  ],
+  "links": [
+    {
+      "points": [
+        [
+          390,
+          341
+        ],
+        [
+          390,
+          367
+        ],
+        [
+          1020,
+          367
+        ],
+        [
+          1020,
+          341
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          690,
+          341
+        ],
+        [
+          690,
+          393
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          690,
+          514
+        ],
+        [
+          690,
+          535
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          390,
+          535
+        ],
+        [
+          1020,
+          535
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          390,
+          535
+        ],
+        [
+          390,
+          562
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          690,
+          535
+        ],
+        [
+          690,
+          562
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1020,
+          535
+        ],
+        [
+          1020,
+          562
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          408,
+          650
+        ],
+        [
+          408,
+          717
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          708,
+          650
+        ],
+        [
+          708,
+          717
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1038,
+          650
+        ],
+        [
+          1038,
+          717
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          365,
+          1147
+        ],
+        [
+          365,
+          1090
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          665,
+          1147
+        ],
+        [
+          665,
+          1110
+        ],
+        [
+          345,
+          1110
+        ],
+        [
+          345,
+          1090
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          365,
+          1014
+        ],
+        [
+          365,
+          953
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          365,
+          864
+        ],
+        [
+          365,
+          800
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          365,
+          717
+        ],
+        [
+          365,
+          650
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          408,
+          800
+        ],
+        [
+          408,
+          864
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          408,
+          953
+        ],
+        [
+          408,
+          1014
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          748,
+          800
+        ],
+        [
+          748,
+          830
+        ],
+        [
+          840,
+          830
+        ],
+        [
+          840,
+          1048
+        ],
+        [
+          830,
+          1048
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          690,
+          1090
+        ],
+        [
+          690,
+          1120
+        ],
+        [
+          390,
+          1120
+        ],
+        [
+          390,
+          1136
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          690,
+          1120
+        ],
+        [
+          690,
+          1136
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          530,
+          894
+        ],
+        [
+          550,
+          894
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          830,
+          926
+        ],
+        [
+          850,
+          926
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1020,
+          853
+        ],
+        [
+          1020,
+          800
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1020,
+          1090
+        ],
+        [
+          1020,
+          1136
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1020,
+          1003
+        ],
+        [
+          1020,
+          953
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1190,
+          903
+        ],
+        [
+          1199,
+          903
+        ],
+        [
+          1199,
+          610
+        ],
+        [
+          1190,
+          610
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1199,
+          610
+        ],
+        [
+          1199,
+          449
+        ],
+        [
+          1190,
+          449
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          352
+        ],
+        [
+          1528,
+          390
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          476
+        ],
+        [
+          1528,
+          516
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          602
+        ],
+        [
+          1528,
+          642
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          728
+        ],
+        [
+          1528,
+          768
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          854
+        ],
+        [
+          1528,
+          894
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          980
+        ],
+        [
+          1528,
+          1020
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1736,
+          1060
+        ],
+        [
+          1755,
+          1060
+        ],
+        [
+          1755,
+          559
+        ],
+        [
+          1736,
+          559
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1528,
+          1106
+        ],
+        [
+          1528,
+          1148
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1387,
+          1148
+        ],
+        [
+          1687,
+          1148
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1387,
+          1148
+        ],
+        [
+          1387,
+          1163
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1537,
+          1148
+        ],
+        [
+          1537,
+          1163
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1687,
+          1148
+        ],
+        [
+          1687,
+          1163
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          242.0,
+          1476
+        ],
+        [
+          242.0,
+          1506
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          618.0,
+          1476
+        ],
+        [
+          618.0,
+          1506
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1015.0,
+          1476
+        ],
+        [
+          1015.0,
+          1506
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1447,
+          1413
+        ],
+        [
+          1464,
+          1413
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1591,
+          1413
+        ],
+        [
+          1608,
+          1413
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1374,
+          1455
+        ],
+        [
+          1374,
+          1498
+        ]
+      ],
+      "color": "muted",
+      "dash": "5 5"
+    },
+    {
+      "points": [
+        [
+          1680,
+          1455
+        ],
+        [
+          1680,
+          1498
+        ]
+      ],
+      "color": "muted",
+      "dash": "5 5"
+    },
+    {
+      "points": [
+        [
+          48,
+          1675
+        ],
+        [
+          90,
+          1675
+        ]
+      ],
+      "color": "teal",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          445,
+          1675
+        ],
+        [
+          487,
+          1675
+        ]
+      ],
+      "color": "blue",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          837,
+          1675
+        ],
+        [
+          879,
+          1675
+        ]
+      ],
+      "color": "amber",
+      "dash": null
+    },
+    {
+      "points": [
+        [
+          1195,
+          1675
+        ],
+        [
+          1237,
+          1675
+        ]
+      ],
+      "color": "muted",
+      "dash": "5 5"
+    }
+  ],
+  "caption": "完整平台将工作台、运行管理、Agent、工具、感知计算、设备适配和产线世界分为七层。控制查询、数据证据与状态变更使用独立路径；右侧展开“干预后再验证”的闭环，底部说明稳定契约与评测真值隔离。"
+}

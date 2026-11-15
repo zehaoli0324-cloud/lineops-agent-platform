@@ -4,6 +4,11 @@
 
 [HTML 架构图](docs/architecture.html) · [完整 Proposal](docs/PROPOSAL.html) · [实施规格](docs/SPECIFICATION.md) · [状态与验证](docs/STATUS.md) · [30 类场景](docs/SCENARIOS.md)
 
+
+![论文式系统架构](docs/architecture-full.png)
+
+[分层、因果与接口说明](docs/ARCHITECTURE.md) · [HTML 交互图](docs/architecture.html) · [矢量 PDF](docs/architecture-full.pdf)
+
 ## 运行首版
 
 需要 Python 3.11+，当前测试 Python 3.12。克隆后在仓库根目录执行：
