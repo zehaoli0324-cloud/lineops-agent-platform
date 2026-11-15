@@ -1,6 +1,6 @@
 {
-  "recorded_at": "2026-11-15",
-  "source_only": true,
+  "recorded_at": "2026-11-16",
+  "source_only": false,
   "installed": false,
   "tested": false,
   "dependencies": [
@@ -10,7 +10,9 @@
       "url": "https://github.com/frangoteam/FUXA.git",
       "commit": "af0ec56e8d729c271885fbba2872f55975f6d246",
       "license": "MIT",
-      "role": "adopted_workbench"
+      "role": "adopted_workbench",
+      "tested": false,
+      "test_scope": "source pointer only; deployment untested"
     },
     {
       "name": "Neuroptica",
@@ -18,7 +20,9 @@
       "url": "https://github.com/fancompute/neuroptica.git",
       "commit": "7bc3c152f2713780b88e701744b0541175b12111",
       "license": "MIT",
-      "role": "adopted_optical_functional_simulator"
+      "role": "adopted_optical_functional_simulator",
+      "tested": true,
+      "test_scope": "standalone 8-port untrained functional check"
     }
   ]
 }

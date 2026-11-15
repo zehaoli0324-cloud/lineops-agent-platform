@@ -1,0 +1,20 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_function_call_roundtrip_across_roles (test_runtime.ModelProtocolTests.test_function_call_roundtrip_across_roles) ... ok
+test_provider_error_is_failed_without_persisting_secret (test_runtime.ModelProtocolTests.test_provider_error_is_failed_without_persisting_secret) ... ok
+test_turn_limit_stops_run (test_runtime.ModelProtocolTests.test_turn_limit_stops_run) ... ok
+test_api_images_validation_and_ui (test_runtime.SandboxTests.test_api_images_validation_and_ui) ... ok
+test_budget_and_operator_stop (test_runtime.SandboxTests.test_budget_and_operator_stop) ... ok
+test_gateway_preconditions_and_replay (test_runtime.SandboxTests.test_gateway_preconditions_and_replay) ... ok
+test_measurement_comes_from_pixels (test_runtime.SandboxTests.test_measurement_comes_from_pixels) ... ok
+test_model_cannot_declare_recovery (test_runtime.SandboxTests.test_model_cannot_declare_recovery) ... ok
+test_restart_marks_unfinished_and_retains_evidence (test_runtime.SandboxTests.test_restart_marks_unfinished_and_retains_evidence) ... ok
+test_ten_case_contract (test_runtime.SandboxTests.test_ten_case_contract) ... ok
+test_unauthorized_tool_is_audited (test_runtime.SandboxTests.test_unauthorized_tool_is_audited) ... ok
+test_work_order_while_running_is_not_handoff (test_runtime.SandboxTests.test_work_order_while_running_is_not_handoff) ... ok
+test_wrong_action_does_not_fix_fault (test_runtime.SandboxTests.test_wrong_action_does_not_fix_fault) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.392s
+
+OK

@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: ["audit:/data"]
+    environment:
+      LINEOPS_MODEL: ${LINEOPS_MODEL:-}
+      LINEOPS_API_KEY: ${LINEOPS_API_KEY:-}
+      LINEOPS_LLM_URL: ${LINEOPS_LLM_URL:-https://api.openai.com/v1/chat/completions}
+  mqtt:
+    image: eclipse-mosquitto:2
+    profiles: [industrial]
+    volumes: ["./config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"]
+    ports: ["127.0.0.1:1883:1883"]
+  fuxa:
+    build:
+      context: ./third_party/FUXA
+      args:
+        INSTALL_ODBC: "false"
+    profiles: [industrial]
+    ports: ["127.0.0.1:1881:1881"]
+  bridge:
+    build: .
+    command: ["python", "-m", "lineops.mqtt_bridge", "--api", "http://app:8000", "--broker", "mqtt"]
+    profiles: [industrial]
+    depends_on: [app, mqtt]
+    restart: on-failure
+volumes:
+  audit:

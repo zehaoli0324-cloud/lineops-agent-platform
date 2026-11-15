@@ -1,0 +1,75 @@
+{
+  "mode": "offline-reference",
+  "cases": [
+    {
+      "scene": "glue",
+      "injection": "normal",
+      "status": "recovered",
+      "tool_calls": 3,
+      "actions": 0
+    },
+    {
+      "scene": "glue",
+      "injection": "clog",
+      "status": "recovered",
+      "tool_calls": 10,
+      "actions": 3
+    },
+    {
+      "scene": "glue",
+      "injection": "supply",
+      "status": "recovered",
+      "tool_calls": 10,
+      "actions": 3
+    },
+    {
+      "scene": "glue",
+      "injection": "camera",
+      "status": "recovered",
+      "tool_calls": 10,
+      "actions": 3
+    },
+    {
+      "scene": "glue",
+      "injection": "persistent",
+      "status": "handed_off",
+      "tool_calls": 13,
+      "actions": 4
+    },
+    {
+      "scene": "filling",
+      "injection": "normal",
+      "status": "recovered",
+      "tool_calls": 3,
+      "actions": 0
+    },
+    {
+      "scene": "filling",
+      "injection": "clog",
+      "status": "recovered",
+      "tool_calls": 10,
+      "actions": 3
+    },
+    {
+      "scene": "filling",
+      "injection": "supply",
+      "status": "recovered",
+      "tool_calls": 10,
+      "actions": 3
+    },
+    {
+      "scene": "filling",
+      "injection": "camera",
+      "status": "recovered",
+      "tool_calls": 10,
+      "actions": 3
+    },
+    {
+      "scene": "filling",
+      "injection": "persistent",
+      "status": "handed_off",
+      "tool_calls": 13,
+      "actions": 4
+    }
+  ]
+}
