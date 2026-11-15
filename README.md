@@ -16,10 +16,17 @@
 
 ## 架构与第三方源码
 
-![完整平台架构](docs/architecture-full.svg)
+![完整平台架构](docs/architecture.html)
 
 - [架构图与模块职责](docs/ARCHITECTURE.md)
 - [上游源码、固定版本与参考工作台](docs/THIRD_PARTY.md)
 - [命名建议](docs/NAMING.md)
 
 已选上游以 Git 子模块固定提交，运行 `git submodule update --init --recursive` 获取源码。当前没有安装或部署声明。
+
+
+## 细化设计
+
+- [可交互 HTML 架构图](docs/architecture.html)
+- [Proposal HTML 阅读版](docs/PROPOSAL.html)
+- [实施规格与验收](docs/SPECIFICATION.md)
