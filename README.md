@@ -2,7 +2,7 @@
 
 模块化工业设备运维平台，当前交付 v0.1 本机软件沙箱。点胶与灌装两条线共用事件管理、工具网关、执行轨迹、图像证据和恢复判据。
 
-[HTML 架构图](docs/architecture.html) · [完整 Proposal](docs/PROPOSAL.html) · [实施规格](docs/SPECIFICATION.md) · [状态与验证](docs/STATUS.md) · [30 类场景](docs/SCENARIOS.md)
+[HTML 架构图](docs/architecture.html) · [完整 Proposal](docs/PROPOSAL.html) · [实施规格](docs/SPECIFICATION.md) · [状态与验证](docs/STATUS.md) · [30 类场景](docs/SCENARIOS.md) · [下一阶段实施计划](docs/NEXT_STEPS.md) · [自动化实验室参考](docs/AUTONOMOUS_LAB_REFERENCES.md)
 
 
 ![论文式系统架构](docs/architecture-full.png)
@@ -67,6 +67,6 @@ FUXA 和 Neuroptica 固定为 Git 子模块；保留各自 MIT 许可与归属�
 
 图像分割采用合成图的 RGB 阈值，不是已训练工业视觉模型；模拟值无真实物理单位，三帧复核不是统计置信度。当前单进程同步运行、设备锁串行执行，没有多设备调度、跨进程锁、真实 PLC/CMMS 或身份认证。只在本机使用；页面显示会等待当前任务完成，停止请求在下一工具边界生效。
 
-下一阶段依次接通真实模型并留存测试轨迹、实测 FUXA/MQTT、实现任务队列与重启恢复、丰富噪声及未见故障、建立真实设备只读试点。完整路线见 [ROADMAP](docs/ROADMAP.md)。
+下一阶段先完成场景适配最小协议与真实模型基线，将动作账本、检查点和中断恢复提前验收，再联通 FUXA/MQTT，并独立验证光学固定特征任务。详细工作包、依赖、对照实验和验收清单见 [NEXT_STEPS](docs/NEXT_STEPS.md)；长期路线见 [ROADMAP](docs/ROADMAP.md)，六篇自动化实验室论文与设计映射见 [参考文献](docs/AUTONOMOUS_LAB_REFERENCES.md)。
 
 比赛项目 [lineops-agentware-2026](https://github.com/zehaoli0324-cloud/lineops-agentware-2026) 赛前只存文档和第三方指针，不复制本仓库实现。仓库名称暂沿用 LineOps（产线运维）；[命名备选](docs/NAMING.md)。
