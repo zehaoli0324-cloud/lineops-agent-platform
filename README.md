@@ -2,7 +2,9 @@
 
 模块化工业设备运维平台，当前交付 v0.1 本机软件沙箱。点胶与灌装两条线共用事件管理、工具网关、执行轨迹、图像证据和恢复判据。
 
-[HTML 架构图](docs/architecture.html) · [完整 Proposal](docs/PROPOSAL.html) · [实施规格](docs/SPECIFICATION.md) · [状态与验证](docs/STATUS.md) · [30 类场景](docs/SCENARIOS.md) · [下一阶段实施计划](docs/NEXT_STEPS.md) · [自动化实验室参考](docs/AUTONOMOUS_LAB_REFERENCES.md)
+[HTML 架构图](docs/architecture.html) · [完整 Proposal](docs/PROPOSAL.html) · [实施规格](docs/SPECIFICATION.md) · [状态与验证](docs/STATUS.md) · [30 类场景](docs/SCENARIOS.md) · [下一阶段实施计划](docs/NEXT_STEPS.md) · [知识库](docs/knowledge/README.md)
+
+知识库整理自动化实验室论文、工业团队调研、任务评测与研发决策。当前先定义并跑通点胶单场景的真实 Agent、独立评分和最小恢复，再用灌装验证兼容性；参见 [单场景评测](docs/knowledge/evaluation-design.md) 与 [M2 验收](docs/knowledge/m2-plan.md)。这些为待执行方案，不代表新增能力已完成。
 
 
 ![论文式系统架构](docs/architecture-full.png)

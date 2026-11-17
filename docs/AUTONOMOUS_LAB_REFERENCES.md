@@ -2,6 +2,8 @@
 
 2026-11-17 · 为下一阶段实施提供参考
 
+新增 [知识库入口](knowledge/README.md)，系统笔记见 [自动化实验室](knowledge/autonomous-labs.md)，包含补充的 AlabOS、错误注入与运行管理设计；另有 [工业团队调研](knowledge/industrial-landscape.md)、[单场景评测](knowledge/evaluation-design.md) 和 [来源及核验边界](knowledge/sources.md)。本页保留原六篇参考。
+
 这里区分论文报道的工作与我们建议迁移的设计。文献不等于已接入依赖，也不构成 LineOps 已完成真实设备控制、具备科研发现能力或获得工业覆盖率的证据。
 
 ## 1 ChemOS 2.0：模块化编排架构
